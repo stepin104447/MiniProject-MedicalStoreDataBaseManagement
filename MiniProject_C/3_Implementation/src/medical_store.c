@@ -101,7 +101,7 @@ int get_data(int id,int s,char* medName,char* supplierName,int supplierId,char* 
     fflush(stdin);
     //goto_xy(20,10);
     printf("supplier name : ");
-    goto_xy(40,10);
+    //goto_xy(40,10);
     printf("%s",supplierName);
     //scanf("%[^\n]%*c", a.supplierName);
     strcpy(a.supplierName,supplierName);
@@ -349,7 +349,7 @@ int search_medicine(char cho,int id1,char *name)
           //  goto_xy(35,8);
             for(int i=0;i<6;i++)
             {
-                Sleep(160);
+                //Sleep(160);
                 printf(". ");
             }
 
