@@ -71,28 +71,28 @@ void test_search_medicine(void) {
 }
 
 void test_sell_medicine(void) {
-  CU_ASSERT(1 == sell_medicine(102,'1',5,102,int 102,"12341021","customer 1021"));
+  CU_ASSERT(1 == sell_medicine(102,'1',5,102,102,"12341021","customer 1021"));
   
   /* Dummy fail*/
  /* CU_ASSERT(3 == divide(2, 2));*/
 }
                               
 void test_list_medicine(void) {
-  CU_ASSERT(1 == list_medicine(void));
+  CU_ASSERT(1 == list_medicine());
   
   /* Dummy fail*/
  /* CU_ASSERT(3 == divide(2, 2));*/
 }
                               
 void test_edit_medicine(void) {
-  CU_ASSERT(0 == edit_medicine(102,"medicine 102","supplier 102","supplier 102","12341002","company 102","supplier1001@gmail.com",50,1,5));
+  CU_ASSERT(1 == edit_medicine(102,"medicine 102","supplier 102",1002,"12341002","company 102","supplier1001@gmail.com",50,1,5));
   
   /* Dummy fail*/
  /* CU_ASSERT(3 == divide(2, 2));*/
 }
                                
 void test_supplier_info(void) {
-  CU_ASSERT(0 == supplier_info('1',1001));
+  CU_ASSERT(1 == supplier_info('1',1001));
   
   /* Dummy fail*/
  /* CU_ASSERT(3 == divide(2, 2));*/
