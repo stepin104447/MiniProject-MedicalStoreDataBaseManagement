@@ -290,10 +290,10 @@ int dispose_medicine(int id1)
         fp=fopen("medicine1.dat","rb+");    //we want to delete
         if(findMedicine=='t')
         {
-            goto_xy(10,14);
+            //goto_xy(10,14);
             printf("The record is sucessfully deleted");
             return(1);
-            goto_xy(10,16);
+            //goto_xy(10,16);
             printf("Delete another record?(Y/N)");
             //another=getch();
         }
