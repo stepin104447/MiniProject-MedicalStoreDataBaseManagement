@@ -204,6 +204,7 @@ int add_medicine(int id,int choice,char* medName,char* supplierName,int supplier
 
                 return(1);
             }
+          fclose(fp);
             return(0);
 
         }
@@ -263,6 +264,7 @@ int dispose_medicine(int id1)
     {
        // goto_xy(10,12);
         printf("\nNo record is found ... Press Any key");
+      fclose(fp);
         return(0);
         //if(getch())
         //main_menu();
@@ -403,6 +405,7 @@ int search_medicine(char cho,int id1,char *name)
                     printf("\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\
 \xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2");
                     id_flag = 1;
+                   fclose(fp);
                     return 1;
                 }
             }
@@ -411,6 +414,7 @@ int search_medicine(char cho,int id1,char *name)
             {
                 //goto_xy(25,9);
                 printf("\nMedicine Record is not available");
+                fclose(fp);
                 return 0;
             }
 
@@ -494,6 +498,7 @@ int search_medicine(char cho,int id1,char *name)
                     printf("\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\
 \xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2");
                     name_flag=1;
+                   fclose(fp);
                     return 1;
 
                 }
@@ -503,6 +508,7 @@ int search_medicine(char cho,int id1,char *name)
             {
                // goto_xy(25,9);
                 printf("\nMedicine Record is not available");
+               fclose(fp);
                 return(0);
             }
 
@@ -623,6 +629,8 @@ int sell_medicine(int id1,char cho,int unit1,int searchId,int removeId,char* con
                        // goto_xy(21,19);
                         printf("\nNot Enough Units!!. Can not sell : ");
                         return_flag=0;
+                        fclose(fp);
+                        fclose(fs);
                         return(0);
                         //getch();
                         //sell_medicine();
@@ -1129,6 +1137,7 @@ int supplier_info(char cho,int id1)
 
         case '2':
         {
+            int return_flag;
             int id;
             fp=fopen("medicine1.dat","rb+");
             rewind(fp);
@@ -1189,9 +1198,10 @@ int supplier_info(char cho,int id1)
                         printf("\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\
 \xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2");
                         id_flag = 1;
-                        return(1);
+                        //return_flag=1;
                     }
                 }
+               fclose(fp);
 
                 if(id_flag!=1)
                 {
@@ -1199,6 +1209,7 @@ int supplier_info(char cho,int id1)
                     printf("Invalid Id");
                     return(0);
                 }
+               return(1);
 
                // goto_xy(30,22);
                 //printf("Do you want to search another record Y/N");
