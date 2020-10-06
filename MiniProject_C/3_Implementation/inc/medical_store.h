@@ -8,7 +8,7 @@
 #include<string.h>
 #include<ctype.h>
 //#include<dos.h>
-//#include<time.h>
+#include<time.h>
 //#include<inttypes.h>
 
 int add_medicine(int id,int choice,char* medName,char* supplierName,int supplierId,char* supplierContact,char* mail,char* companyName,float price,int qty,int rackNo,int cabinNo);
@@ -23,7 +23,7 @@ int get_data(int id,int s,char* medName,char* supplierName,int supplierId,char* 
 int check_id(int);
 void returnfunc(void);
 
-void goto_xy(int x,int y);
+//void goto_xy(int x,int y);
 //{
    // coord.X = x;
    // coord.Y = y;
