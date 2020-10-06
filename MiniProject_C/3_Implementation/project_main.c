@@ -29,7 +29,7 @@ void close_application()
     goto_xy(16,3);
     printf("\tMEDICAL STORE MANAGEMENT SYSTEM");
     goto_xy(16,6);
-    printf("\Mini Project in C");
+    printf("\n Mini Project in C");
     goto_xy(16,8);
     printf("******************************************");
     goto_xy(16,10);
