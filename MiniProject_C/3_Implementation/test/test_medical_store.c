@@ -51,7 +51,7 @@ int main() {
 void test_add_medicine(void) {
   CU_ASSERT(1 == add_medicine(101,1,"medicine 101","supplier 101",1001,"12341001","supplier1001@gmail.com","company 101",100.00,20,2,3));
   CU_ASSERT(1 == add_medicine(102,1,"medicine 102","supplier 102",1002,"12341002","supplier1002@gmail.com","company 102",150.00,30,4,1));
-  //CU_ASSERT(1 == add_medicine(103,2,"medicine 103","supplier 103",1003,"12341003","supplier1003@gmail.com","company 103",200.00,40,2,4));
+  CU_ASSERT(1 == add_medicine(103,2,"medicine 103","supplier 103",1003,"12341003","supplier1003@gmail.com","company 103",200.00,40,2,4));
   
   /* Dummy fail*/
  /* CU_ASSERT(1500 == add(750, 7500));*/
