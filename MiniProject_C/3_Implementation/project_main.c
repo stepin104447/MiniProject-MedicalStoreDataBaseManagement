@@ -1,5 +1,6 @@
 #include "medical_store.h"
-#include<conio.h>
+#include<stdio.h>
+//#include<conio.h>
 
 //COORD coord = {0,0};
 //void goto_xy(int x,int y)
@@ -21,28 +22,28 @@ char password[]={"admin"};
 int main()
 {
     Password();
-    getch();
+   // getch();
     return(0);
 }
 void close_application()
 {
     system("cls");
-    goto_xy(16,3);
+   // goto_xy(16,3);
     printf("\tMEDICAL STORE MANAGEMENT SYSTEM");
-    goto_xy(16,6);
+   // goto_xy(16,6);
     printf("\n Mini Project in C");
-    goto_xy(16,8);
-    printf("******************************************");
-    goto_xy(16,10);
-    printf("*******************************************");
-    goto_xy(16,11);
-    printf("*******************************************");
-    goto_xy(16,13);
-    printf("********************************************");
-    goto_xy(10,17);
-    printf("Exiting in 3 second...........>");
+   // goto_xy(16,8);
+    printf("\n******************************************");
+    //goto_xy(16,10);
+    printf("\n*******************************************");
+    //goto_xy(16,11);
+    printf("\n*******************************************");
+   // goto_xy(16,13);
+    printf("\n********************************************");
+    //goto_xy(10,17);
+    printf("\nExiting in 3 second...........>");
     //flushall();
-    Sleep(3000);
+   // Sleep(3000);
     exit(0);
 }
 
@@ -53,26 +54,28 @@ void Password(void)
     char d[]=" Password Protected";
     int i=0;
 
-    goto_xy(10,4); 
+   // goto_xy(10,4); 
     for(i=0;i<20;i++)
     {
-        Sleep(50);
+       // Sleep(50);
         printf("#");
     }
     for(i=0;i<20;i++)
     {
-        Sleep(50);
+       // Sleep(50);
         printf("%c",d[i]);
     }
     for(i=0;i<20;i++)
     {
-        Sleep(50);
+       // Sleep(50);
         printf("#");
     }
     i=0;
-    goto_xy(15,7);
-    printf("Enter Password :  ");
-    while(ch!=13)
+   // goto_xy(15,7);
+    scanf("Enter Password :  %s",pass);
+   
+  /*
+  while(ch!=13)
     {
         ch=getch();
 
@@ -83,23 +86,25 @@ void Password(void)
             i++;
         }
     }
+    
     pass[i]='\0';
+    */
     if(strcmp(pass,password)==0)
     {
-        goto_xy(15,25);
+        //goto_xy(15,25);
         printf(" password match");
-        goto_xy(15,27);
+       // goto_xy(15,27);
         printf(" enter any key to continue\n");
-        goto_xy(42,27);
-        getch();
+       // goto_xy(42,27);
+       // getch();
         main_menu();
     }
     else
     {
-        goto_xy(15,25);
+       // goto_xy(15,25);
         printf("Warning!! incorrect password. Try Again.");
-        goto_xy(56,25);
-        getch();
+       // goto_xy(56,25);
+       // getch();
         Password();
     }
 }
@@ -110,31 +115,31 @@ void main_menu(void)
 
     system("cls");
     //int i;
-    goto_xy(20,3);
-    printf("\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE  MAIN MENU \xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE");
-    goto_xy(20,5);
-    printf("\xDB\xDB\xDB\xDB\xB2 1. Add Medicine  ");
-    goto_xy(20,7);
-    printf("\xDB\xDB\xDB\xDB\xB2 2. Dispose Medicine");
-    goto_xy(20,9);
-    printf("\xDB\xDB\xDB\xDB\xB2 3. Search Medicine");
-    goto_xy(20,11);
-    printf("\xDB\xDB\xDB\xDB\xB2 4. Sell Medicine");
-    goto_xy(20,13);
-    printf("\xDB\xDB\xDB\xDB\xB2 5. List Medicine");
-    goto_xy(20,15);
-    printf("\xDB\xDB\xDB\xDB\xB2 6. Edit Medicine");
-    goto_xy(20,17);
-    printf("\xDB\xDB\xDB\xDB\xB2 7. Supplier Information");
-    goto_xy(20,19);
-    printf("\xDB\xDB\xDB\xDB\xB2 8. Close Application");
-    goto_xy(20,21);
-    printf("\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\
+   // goto_xy(20,3);
+    printf("\n\t\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE  MAIN MENU \xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE");
+    //goto_xy(20,5);
+    printf("\n\xDB\xDB\xDB\xDB\xB2 1. Add Medicine  ");
+    //goto_xy(20,7);
+    printf("\n\xDB\xDB\xDB\xDB\xB2 2. Dispose Medicine");
+   // goto_xy(20,9);
+    printf("\n\xDB\xDB\xDB\xDB\xB2 3. Search Medicine");
+    //goto_xy(20,11);
+    printf("\n\xDB\xDB\xDB\xDB\xB2 4. Sell Medicine");
+    //goto_xy(20,13);
+    printf("\n\xDB\xDB\xDB\xDB\xB2 5. List Medicine");
+    //goto_xy(20,15);
+    printf("\n\xDB\xDB\xDB\xDB\xB2 6. Edit Medicine");
+    //goto_xy(20,17);
+    printf("\n\xDB\xDB\xDB\xDB\xB2 7. Supplier Information");
+    //goto_xy(20,19);
+    printf("\n\xDB\xDB\xDB\xDB\xB2 8. Close Application");
+    //goto_xy(20,21);
+    printf("\n\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\
 \xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE");
-    goto_xy(20,22);
+   // goto_xy(20,22);
     //t(); display time
-    goto_xy(20,23);
-    printf("Enter your choice:");
+    //goto_xy(20,23);
+    printf("\nEnter your choice:");
     scanf("%d",&s);
         switch(s)
         {
@@ -148,87 +153,87 @@ void main_menu(void)
 
 
                 system("cls");
-                goto_xy(20,5);
-                printf("\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2 SELECT MEDICINE CATEGORY \
+               // goto_xy(20,5);
+                printf("\n\t\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2 SELECT MEDICINE CATEGORY \
 \xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2");
-                goto_xy(20,7);
-                printf("\xDB\xDB\xDB\xDB\xB2 1. Tablets");
-                goto_xy(20,9);
-                printf("\xDB\xDB\xDB\xDB\xB2 2. Capsules");
-                goto_xy(20,11);
-                printf("\xDB\xDB\xDB\xDB\xB2 3. Drops");
-                goto_xy(20,13);
-                printf("\xDB\xDB\xDB\xDB\xB2 4. Inhalers");
-                goto_xy(20,15);
-                printf("\xDB\xDB\xDB\xDB\xB2 5. Syrup");
-                goto_xy(20,17);
-                printf("\xDB\xDB\xDB\xDB\xB2 6. others");
-                goto_xy(20,19);
-                printf("\xDB\xDB\xDB\xDB\xB2 7. Back to main menu");
-                goto_xy(20,21);
-                printf("\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2");
-                goto_xy(20,22);
-                printf("Enter your choice:");
+               // goto_xy(20,7);
+                printf("\n\xDB\xDB\xDB\xDB\xB2 1. Tablets");
+               // goto_xy(20,9);
+                printf("\n\xDB\xDB\xDB\xDB\xB2 2. Capsules");
+                //goto_xy(20,11);
+                printf("\n\xDB\xDB\xDB\xDB\xB2 3. Drops");
+                //goto_xy(20,13);
+                printf("\n\xDB\xDB\xDB\xDB\xB2 4. Inhalers");
+               // goto_xy(20,15);
+                printf("\n\xDB\xDB\xDB\xDB\xB2 5. Syrup");
+                //goto_xy(20,17);
+                printf("\n\xDB\xDB\xDB\xDB\xB2 6. others");
+               // goto_xy(20,19);
+                printf("\n\xDB\xDB\xDB\xDB\xB2 7. Back to main menu");
+                //goto_xy(20,21);
+                printf("\n\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2");
+                //goto_xy(20,22);
+                printf("\nEnter your choice:");
                 scanf("%d",&choice);
                 if(choice==7)
                     main_menu();
                 system("cls");
                 int t;
-                goto_xy(20,3);
-                printf("Enter information");
-                goto_xy(20,7);
-                printf("Medicine Id : ");
-                goto_xy(40,7);
+               // goto_xy(20,3);
+                printf("\nEnter information");
+               // goto_xy(20,7);
+                printf("\nMedicine Id : ");
+               // goto_xy(40,7);
                 scanf("%d",&id);
                 fflush(stdin);
-                goto_xy(20,9);
+               // goto_xy(20,9);
 
-                printf("Medicine Name : ");
-                goto_xy(40,9);
+                printf("\nMedicine Name : ");
+               // goto_xy(40,9);
                 scanf("%[^\n]%*c", medName);
                 fflush(stdin);
 
-                goto_xy(20,10);
-                printf("supplier name : ");
-                goto_xy(40,10);
+                //goto_xy(20,10);
+                printf("\nsupplier name : ");
+                //goto_xy(40,10);
                 scanf("%[^\n]%*c", supplierName);
                 fflush(stdin);
                 //scanf("%s",a.supplierName);
-                goto_xy(20,11);
-                printf("supplier ID : ");
-                goto_xy(40,11);
+                //goto_xy(20,11);
+                printf("\nsupplier ID : ");
+                //goto_xy(40,11);
                 scanf("%d",&supplierId);
                 fflush(stdin);
-                goto_xy(20,12);
-                printf("supplier contact : ");
-                goto_xy(40,12);
+                //goto_xy(20,12);
+                printf("\nsupplier contact : ");
+                //goto_xy(40,12);
                 scanf("%s",supplierContact);
                 fflush(stdin);
-                goto_xy(20,13);
-                printf("Supplier Email : ");
-                goto_xy(40,13);
+                //goto_xy(20,13);
+                printf("\nSupplier Email : ");
+                //goto_xy(40,13);
                 scanf("%[^\n]%*c",mail);
                 fflush(stdin);
-                goto_xy(20,14);
-                printf("Company Name : ");
-                goto_xy(40,14);
+                //goto_xy(20,14);
+                printf("\nCompany Name : ");
+                //goto_xy(40,14);
                 scanf("%[^\n]%*c", companyName);
                 fflush(stdin);
-                goto_xy(20,15);
-                printf("price : ");
-                goto_xy(40,15);
+               // goto_xy(20,15);
+                printf("\nprice : ");
+               // goto_xy(40,15);
                 scanf("%f",&price);
-                goto_xy(20,16);
-                printf("quantity : ");
-                goto_xy(40,16);
+                //goto_xy(20,16);
+                printf("\nquantity : ");
+                //goto_xy(40,16);
                 scanf("%d",&qty);
-                goto_xy(20,17);
-                printf("rack no : ");
-                goto_xy(40,17);
+                //goto_xy(20,17);
+                printf("\nrack no : ");
+               // goto_xy(40,17);
                 scanf("%d",&rackNo);
-                goto_xy(20,18);
-                printf("cabin no : ");
-                goto_xy(40,18);
+                //goto_xy(20,18);
+                printf("\ncabin no : ");
+               // goto_xy(40,18);
                 scanf("%d",&cabinNo);
                 system("cls");
 
@@ -243,16 +248,16 @@ void main_menu(void)
             {
                 int id1,ret;
                 system("cls");
-                goto_xy(10,2);
-                printf("Delete Medicine");
-                goto_xy(10,3);
-                printf("******************");
-                goto_xy(10,5);
-                printf("Enter the Medicine ID to  delete:");
+               // goto_xy(10,2);
+                printf("\n\tDelete Medicine");
+               // goto_xy(10,3);
+                printf("\n\t******************");
+               // goto_xy(10,5);
+                printf("\nEnter the Medicine ID to  delete:");
                 scanf("%d",&id1);
                 ret=dispose_medicine(id1);
                 printf("\n return value of dispose medicine = %d",ret);
-                getch();
+               // getch();
                 main_menu();
             }
             break;
@@ -265,24 +270,25 @@ void main_menu(void)
 
                 system("cls");
 
-                printf("\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9 SEARCH MEDICINE \
+                printf("\n\t\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9 SEARCH MEDICINE \
 \xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9");
 
-                goto_xy(20,10);
-                printf("\xDB\xDB\xDB\xDB\xDB 1. Search by ID ");
-                goto_xy(20,12);
-                printf("\xDB\xDB\xDB\xDB\xDB 2. Search by Name ");
-                goto_xy(20,15);
-                printf("Enter your choice");
-                cho=getch();
+               // goto_xy(20,10);
+                printf("\n\xDB\xDB\xDB\xDB\xDB 1. Search by ID ");
+               // goto_xy(20,12);
+                printf("\n\xDB\xDB\xDB\xDB\xDB 2. Search by Name ");
+               // goto_xy(20,15);
+                printf("\nEnter your choice");
+                scanf("%c",&cho);
+               // cho=getch();
                 if(cho=='1')
                 {
                     system("cls");
-                    goto_xy(25,4);
-                    printf("******************** Search By ID ******************");
-                    goto_xy(25,6);
-                    printf("Enter ID : ");
-                    goto_xy(39,6);
+                    //goto_xy(25,4);
+                    printf("\n\t******************** Search By ID ******************");
+                    //goto_xy(25,6);
+                    printf("\nEnter ID : ");
+                   // goto_xy(39,6);
                     scanf("%d",&id1);
                     ret=search_medicine(cho,id1,name);
                     printf("\n return value of search = %d",ret);
@@ -291,17 +297,17 @@ void main_menu(void)
                 {
                     system("cls");
                     char s[15];
-                    goto_xy(25,4);
-                    printf("************** Search By Name **************");
-                    goto_xy(25,6);
-                    printf("Enter name : ");
-                    goto_xy(45,6);
+                   // goto_xy(25,4);
+                    printf("\n\t************** Search By Name **************");
+                   // goto_xy(25,6);
+                    printf("\nEnter name : ");
+                  //  goto_xy(45,6);
                     fflush(stdin);
                     scanf("%[^\n]%*c", name);
                     ret=search_medicine(cho,id1,name);
                     printf("\nreturn value of search = %d",ret);
                 }
-                getch();
+               // getch();
                 main_menu();
 
             }
@@ -312,39 +318,39 @@ void main_menu(void)
                 char customerName[30]={" "},contactNo[30]={" "};
                 char cho;
                 system("cls");
-                goto_xy(2,2);
-                printf("************************* SELL MEDICINE ************************");
-                goto_xy(10,5);
-                printf("\xDB\xDB\xDB\xDB\xDB 1. Sell Medicine");
-                goto_xy(10,7);
-                printf("\xDB\xDB\xDB\xDB\xDB 2. List Sold Medicines");
-                goto_xy(10,9);
-                printf("\xDB\xDB\xDB\xDB\xDB 3. Search Sold Medicine");
-                goto_xy(10,11);
-                printf("\xDB\xDB\xDB\xDB\xDB 4. Remove Sold Medicine");
-                goto_xy(10,13);
-                printf("\xDB\xDB\xDB\xDB\xDB 5. Main Menu");
-                goto_xy(10,15);
-                printf("Enter your choice : ");
-                cho =getch();
+                //goto_xy(2,2);
+                printf("\n\t************************* SELL MEDICINE ************************");
+               // goto_xy(10,5);
+                printf("\n\xDB\xDB\xDB\xDB\xDB 1. Sell Medicine");
+               // goto_xy(10,7);
+                printf("\n\xDB\xDB\xDB\xDB\xDB 2. List Sold Medicines");
+               // goto_xy(10,9);
+                printf("\n\xDB\xDB\xDB\xDB\xDB 3. Search Sold Medicine");
+               // goto_xy(10,11);
+                printf("\n\xDB\xDB\xDB\xDB\xDB 4. Remove Sold Medicine");
+                //goto_xy(10,13);
+                printf("\n\xDB\xDB\xDB\xDB\xDB 5. Main Menu");
+                //goto_xy(10,15);
+                printf("\nEnter your choice : ");
+                //cho =getch();
                 if(cho=='1')
                 {
                     system("cls");
-                    goto_xy(22,4);
+                   // goto_xy(22,4);
                     printf("SELL MEDICINE");
-                    goto_xy(20,5);
+                   // goto_xy(20,5);
                     printf("******************");
-                    goto_xy(21,7);
+                   // goto_xy(21,7);
                     printf("Medicine ID : ");
                     scanf("%d",&id1);
-                    goto_xy(21,8);
+                   //goto_xy(21,8);
                     printf("Name of Customer : ");
                     fflush(stdin);
                     scanf("%[^\n]%*c", customerName);
-                    goto_xy(21,9);
+                   // goto_xy(21,9);
                     printf("Contact No : ");
                     scanf("%s",contactNo);
-                    goto_xy(21,10);
+                    //goto_xy(21,10);
                     printf("Units Needed : ");
                     scanf("%d",&unit1);
 
@@ -358,11 +364,11 @@ void main_menu(void)
                 if(cho=='3')
                 {
                     system("cls");
-                    goto_xy(10,2);
+                    //goto_xy(10,2);
                     printf("Search Sold Medicines");
-                    goto_xy(10,3);
+                   // goto_xy(10,3);
                     printf("***********************");
-                    goto_xy(10,6);
+                    //goto_xy(10,6);
                     printf("Enter Medicine Id : ");
                     scanf("%d",&searchId);
                     ret=sell_medicine(id1,cho,unit1,searchId,removeId,contactNo,customerName);
@@ -370,11 +376,11 @@ void main_menu(void)
                 if(cho=='4')
                 {
                      system("cls");
-                    goto_xy(10,2);
+                   // goto_xy(10,2);
                     printf("Remove Medicine From Sold List");
-                    goto_xy(10,3);
+                   // goto_xy(10,3);
                     printf("********************************");
-                    goto_xy(10,5);
+                   // goto_xy(10,5);
                     printf("Enter Medicine ID to remove:");
                     scanf("%d",&removeId);
                     ret=sell_medicine(id1,cho,unit1,searchId,removeId,contactNo,customerName);
@@ -406,9 +412,9 @@ void main_menu(void)
                  system("cls");
                  char medName[20],supplierName[20],supplierContact[20],mail[20],companyName[20];
                 int id1,rackNo,cabinNo,qty,supplierId;
-                goto_xy(20,4);
+               // goto_xy(20,4);
                 printf("****************Edit Medicine Details****************");
-                goto_xy(20,6);
+               // goto_xy(20,6);
                 printf("Enter the medicine ID : ");
                 scanf("%d",&id1);
 
@@ -416,52 +422,52 @@ void main_menu(void)
                 //{
                     //goto_xy(20,8);
                    // printf("Medicine Record is available");
-                    goto_xy(32,9);
+                   // goto_xy(32,9);
                     printf("Enter New Details");
-                    goto_xy(30,10);
+                   // goto_xy(30,10);
                     printf("***********************");
-                    goto_xy(30,12);
+                   // goto_xy(30,12);
                     printf("Medicine ID : ");
-                    goto_xy(50,12);
+                   // goto_xy(50,12);
                     printf("%d",id1);
-                    goto_xy(30,13);
+                   // goto_xy(30,13);
                     printf("Medicine Name : ");
-                    goto_xy(50,13);
+                   // goto_xy(50,13);
                     fflush(stdin);
                     scanf("%[^\n]%*c", medName);
-                    goto_xy(30,14);
+                  //  goto_xy(30,14);
                     printf("Supplier Name : ");
-                    goto_xy(50,14);
+                  //  goto_xy(50,14);
                     fflush(stdin);
                     scanf("%[^\n]%*c", supplierName);
-                    goto_xy(30,15);
+                  //  goto_xy(30,15);
                     printf("Supplier ID : ");
-                    goto_xy(50,15);
+                   // goto_xy(50,15);
                     scanf("%d",&supplierId);
-                    goto_xy(30,16);
+                   // goto_xy(30,16);
                     printf("Supplier Ph: ");
-                    goto_xy(50,16);
+                   // goto_xy(50,16);
                     scanf("%s",supplierContact);
-                    goto_xy(30,17);
+                   // goto_xy(30,17);
                     fflush(stdin);
                     printf("Company Name : ");
-                    goto_xy(50,17);
+                   // goto_xy(50,17);
                     scanf("%[^\n]%*c", companyName);
                     goto_xy(30,18);
                     printf("Mail ID : ");
-                    goto_xy(50,18);
+                   // goto_xy(50,18);
                     scanf("%s",mail);
-                    goto_xy(30,19);
+                   // goto_xy(30,19);
                     printf("Quantity : ");
-                    goto_xy(50,19);
+                   // goto_xy(50,19);
                     scanf("%d",&qty);
-                    goto_xy(30,20);
+                   // goto_xy(30,20);
                     printf("Rack : ");
-                    goto_xy(50,20);
+                   // goto_xy(50,20);
                     scanf("%d",&rackNo);
-                    goto_xy(30,21);
+                   // goto_xy(30,21);
                     printf("Cabin : ");
-                    goto_xy(50,21);
+                   // goto_xy(50,21);
                     scanf("%d",&cabinNo);
                     ret=edit_medicine(id1,medName,supplierName,supplierId,supplierContact,companyName,mail,qty,rackNo,cabinNo);
 
@@ -485,17 +491,17 @@ void main_menu(void)
                 int id1=0;
                 int ret;
 
-                goto_xy(10,2);
+               // goto_xy(10,2);
                 printf("Supplier Details");
-                goto_xy(9,3);
+               // goto_xy(9,3);
                 printf("*******************");
-                goto_xy(10,5);
+              //  goto_xy(10,5);
                 printf("\xDB\xDB\xDB\xDB 1. Supplier List");
-                goto_xy(10,7);
+               // goto_xy(10,7);
                 printf("\xDB\xDB\xDB\xDB 2. Search Supplier");
-                goto_xy(10,9);
+              //  goto_xy(10,9);
                 printf("\xDB\xDB\xDB\xDB 3. Main Menu");
-                goto_xy(10,11);
+              //  goto_xy(10,11);
                 printf("Enter Your Choice ");
                 cho=getch();
 
@@ -506,11 +512,11 @@ void main_menu(void)
                 if(cho=='2')
                 {
                     system("cls");
-                    goto_xy(25,4);
+                   // goto_xy(25,4);
                     printf("******************** Search Supplier ******************");
-                    goto_xy(25,6);
+                   // goto_xy(25,6);
                     printf("Enter ID : ");
-                    goto_xy(39,6);
+                  //  goto_xy(39,6);
                     scanf("%d",&id1);
                     ret=supplier_info(cho,id1);
                 }
@@ -527,7 +533,7 @@ void main_menu(void)
             close_application();
             default:
             {
-                goto_xy(10,25);
+               // goto_xy(10,25);
                 printf("\aWrong Entry!!Please re-entered correct option");
                 getch();
                 main_menu();
