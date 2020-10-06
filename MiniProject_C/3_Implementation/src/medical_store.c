@@ -620,7 +620,7 @@ int sell_medicine(int id1,char cho,int unit1,int searchId,int removeId,char* con
                     unit=unit1;
                     if(unit>a.qty)
                     {
-                        goto_xy(21,19);
+                       // goto_xy(21,19);
                         printf("Not Enough Units!!. Press Any Key to go Back : ");
                         return_flag=0;
                         return(0);
@@ -1005,7 +1005,7 @@ int edit_medicine(int id1,char* medName,char* supplierName,int supplierId,char* 
             strcpy(a.supplierName,supplierName);
            // goto_xy(30,15);
             printf("Supplier ID : ");
-            goto_xy(50,15);
+            //goto_xy(50,15);
             //scanf("%d",&a.supplierId);
             a.supplierId=supplierId;
           //  goto_xy(30,16);
