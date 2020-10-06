@@ -52,7 +52,7 @@ void Password(void)
     char d[]=" Password Protected";
     int i=0;
 
-    goto_xy(10,4);
+    goto_xy(10,4); 
     for(i=0;i<20;i++)
     {
         Sleep(50);
