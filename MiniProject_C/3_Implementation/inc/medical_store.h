@@ -1,14 +1,14 @@
 #ifndef MEDICAL_STORE_H_INCLUDED
 #define MEDICAL_STORE_H_INCLUDED
 
-#include<windows.h>
+//#include<windows.h>
 #include<stdio.h>
 #include<conio.h>
 #include <stdlib.h>
 #include<string.h>
 #include<ctype.h>
-#include<dos.h>
-#include<time.h>
+//#include<dos.h>
+//#include<time.h>
 #include<inttypes.h>
 
 int add_medicine(int id,int choice,char* medName,char* supplierName,int supplierId,char* supplierContact,char* mail,char* companyName,float price,int qty,int rackNo,int cabinNo);
