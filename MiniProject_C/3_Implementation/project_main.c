@@ -454,7 +454,7 @@ void main_menu(void)
                     printf("\nCompany Name : ");
                    // goto_xy(50,17);
                     scanf("%[^\n]%*c", companyName);
-                    goto_xy(30,18);
+                   // goto_xy(30,18);
                     printf("\nMail ID : ");
                    // goto_xy(50,18);
                     scanf("%s",mail);
