@@ -1,4 +1,5 @@
 #include "medical_store.h"
+#include<conio.h>
 
 //COORD coord = {0,0};
 //void goto_xy(int x,int y)
