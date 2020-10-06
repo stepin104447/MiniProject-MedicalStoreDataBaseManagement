@@ -75,7 +75,7 @@ void test_search_medicine(void) {
 
 void test_sell_medicine(void) {
   CU_ASSERT(1 == sell_medicine(102,'1',5,102,102,"12341021","customer 1021"));
-  //CU_ASSERT(1 == sell_medicine(102,'3',5,102,102,"12341021","customer 1021"));
+  CU_ASSERT(1 == sell_medicine(102,'3',5,102,102,"12341021","customer 1021"));
   
   /* Dummy fail*/
  /* CU_ASSERT(3 == divide(2, 2));*/
