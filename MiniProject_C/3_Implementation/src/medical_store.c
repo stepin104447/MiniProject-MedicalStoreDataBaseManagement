@@ -571,11 +571,11 @@ int sell_medicine(int id1,char cho,int unit1,int searchId,int removeId,char* con
 
                 system("cls");
                // goto_xy(22,4);
-                printf("SELL MEDICINE");
+                printf("\n\tSELL MEDICINE");
               //  goto_xy(20,5);
                 printf("******************");
               //  goto_xy(21,7);
-                printf("Medicine ID to sell : ");
+                printf("\nMedicine ID to sell : ");
                 //scanf("%d",&id);
                 id=id1;
                 printf("%d",id);
@@ -586,34 +586,34 @@ int sell_medicine(int id1,char cho,int unit1,int searchId,int removeId,char* con
                 if(check_id(id)==0)
                 {
                   //  goto_xy(21,9);
-                    printf("Medicine Record is Available");
+                    printf("\nMedicine Record is Available");
                    // goto_xy(21,11);
-                    printf("Medicine Name : ");
+                    printf("\nMedicine Name : ");
                   //  goto_xy(41,11);
                     printf("%s",a.medName);
                   //  goto_xy(21,12);
-                    printf("Units Available : ");
+                    printf("\nUnits Available : ");
                    // goto_xy(41,12);
                     printf("%d",a.qty);
                    // goto_xy(21,13);
-                    printf("cost : ");
+                    printf("\ncost : ");
                    // goto_xy(41,13);
                     printf("%0.2f",a.price);
                   //  goto_xy(21,15);
-                    printf("Name of Customer : ");
+                    printf("\nName of Customer : ");
                    // goto_xy(41,15);
                     printf("%s",customerName);
                     fflush(stdin);
                     //scanf("%[^\n]%*c", a.customerName);
                     strcpy(a.customerName,customerName);
                    // goto_xy(21,16);
-                    printf("Contact No : ");
+                    printf("\nContact No : ");
                   //  goto_xy(41,16);
                     printf("%s",contactNo);
                     //scanf("%s",a.contactNo);
                     strcpy(a.contactNo,contactNo);
                    // goto_xy(21,17);
-                    printf("Units Needed : ");
+                    printf("\nUnits Needed : ");
                   //  goto_xy(41,17);
                     printf("%d",unit1);
                     //scanf("%d",&unit);
@@ -621,7 +621,7 @@ int sell_medicine(int id1,char cho,int unit1,int searchId,int removeId,char* con
                     if(unit>a.qty)
                     {
                        // goto_xy(21,19);
-                        printf("Not Enough Units!!. Press Any Key to go Back : ");
+                        printf("\nNot Enough Units!!. Can not sell : ");
                         return_flag=0;
                         return(0);
                         //getch();
@@ -631,7 +631,7 @@ int sell_medicine(int id1,char cho,int unit1,int searchId,int removeId,char* con
 
                     total=unit*a.price;
                    // goto_xy(21,19);
-                    printf(" Total Price  =   RS %0.2f",total);
+                    printf(" \nTotal Price  =   RS %0.2f",total);
                     fclose(fp);
 
                     time_t t = time(NULL);
@@ -642,7 +642,7 @@ int sell_medicine(int id1,char cho,int unit1,int searchId,int removeId,char* con
                     a.soldDate.yy=tm.tm_year + 1900;
 
                    // goto_xy(21,20);
-                    printf("The Medicine of ID %d is sold",a.id);
+                    printf("\nThe Medicine of ID %d is sold",a.id);
                     return_flag=1;
 
 
@@ -655,11 +655,11 @@ int sell_medicine(int id1,char cho,int unit1,int searchId,int removeId,char* con
                 if(c==0)
                 {
                    // goto_xy(21,9);
-                    printf("No Medicine Record Found");
+                    printf("\nNo Medicine Record Found");
                     return_flag=0;
                 }
                // goto_xy(21,24);
-                printf("Do you want to sell more medicine(Y/N):");
+                //printf("Do you want to sell more medicine(Y/N):");
                 fflush(stdin);
                 another='n';
                 fclose(fp);
@@ -689,11 +689,11 @@ int sell_medicine(int id1,char cho,int unit1,int searchId,int removeId,char* con
             system("cls");
             int j=6;
             //goto_xy(47,1);
-            printf("SOLD MEDICINE");
+            printf("\n\t\t\tSOLD MEDICINE");
            // goto_xy(2,2);
-            printf("********************************************************************************************************");
+            printf("\n********************************************************************************************************");
            // goto_xy(2,4);
-            printf("Customer Name        Contact No         Med ID      Med Name           Price     Unit Sold      Date ");
+            printf("\nCustomer Name        Contact No         Med ID      Med Name           Price     Unit Sold      Date ");
 
             fs=fopen("sell.dat","rb");
             while (fread(&a,sizeof(a),1,fs)==1)
@@ -717,7 +717,7 @@ int sell_medicine(int id1,char cho,int unit1,int searchId,int removeId,char* con
             }
             fclose(fs);
            // goto_xy(1,j+5);
-            printf("Press Enter to go back : ");
+            //printf("Press Enter to go back : ");
             if(j>6)
                 return_flag=1;
             else
@@ -741,11 +741,11 @@ int sell_medicine(int id1,char cho,int unit1,int searchId,int removeId,char* con
             {
                 system("cls");
                // goto_xy(10,2);
-                printf("Search Sold Medicines");
+                printf("\n\tSearch Sold Medicines");
                // goto_xy(10,3);
-                printf("***********************");
+                printf("\n\t***********************");
                // goto_xy(10,6);
-                printf("Medicine Id to search : ");
+                printf("\nMedicine Id to search : ");
                 //scanf("%d",&id);
                 id=searchId;
                 printf("%d",id);
@@ -757,33 +757,33 @@ int sell_medicine(int id1,char cho,int unit1,int searchId,int removeId,char* con
                         system("cls");
                        // Sleep(1000);
                        // goto_xy(10,6);
-                        printf("Medicine Record Exist");
+                        printf("\nMedicine Record Exist");
                        // goto_xy(10,8);
-                        printf("Medicine ID : ");
+                        printf("\nMedicine ID : ");
                       //  goto_xy(30,8);
                         printf("%d",a.id);
                        // goto_xy(10,9);
-                        printf("Medicine Name : ");
+                        printf("\nMedicine Name : ");
                        // goto_xy(30,9);
                         printf("%s",a.medName);
                       //  goto_xy(10,11);
-                        printf("Customer Name : ");
+                        printf("\nCustomer Name : ");
                       //  goto_xy(30,11);
                         printf("%s",a.customerName);
                       //  goto_xy(10,12);
-                        printf("contact no : ");
+                        printf("\ncontact no : ");
                        // goto_xy(30,12);
                         printf("%s",a.contactNo);
                       //  goto_xy(10,13);
-                        printf("Price : ");
+                        printf("\nPrice : ");
                        // goto_xy(30,13);
                         printf("%0.2f",a.price);
                        // goto_xy(10,14);
-                        printf("Units Sold : ");
+                        printf("\nUnits Sold : ");
                        // goto_xy(30,14);
                         printf("%d",a.unitSold);
                        // goto_xy(10,16);
-                        printf("Press any ENTER key to view the next result ");
+                       // printf("Press any ENTER key to view the next result ");
                         //while(getch()!=13);
                        // Sleep(2500);
                        // for(int i=0;i<8;i++)
@@ -801,12 +801,12 @@ int sell_medicine(int id1,char cho,int unit1,int searchId,int removeId,char* con
                 if(c==0)
                 {
                    // goto_xy(10,8);
-                    printf("No Record Found");
+                    printf("\nNo Record Found");
                     return_flag=0;
                 }
                 return_flag=1;
                // goto_xy(10,20);
-                printf("Try Another Search?(Y/N)");
+               // printf("Try Another Search?(Y/N)");
                 //another=getch();
                 return(return_flag);
             }
@@ -824,11 +824,11 @@ int sell_medicine(int id1,char cho,int unit1,int searchId,int removeId,char* con
             {
                 system("cls");
                // goto_xy(10,2);
-                printf("Remove Medicine From Sold List");
+                printf("\n\tRemove Medicine From Sold List");
                // goto_xy(10,3);
                 printf("********************************");
                // goto_xy(10,5);
-                printf("Medicine ID to remove:");
+                printf("\nMedicine ID to remove:");
                 //scanf("%d",&id);
                 id=removeId;
                 printf("%d",id);
@@ -839,22 +839,22 @@ int sell_medicine(int id1,char cho,int unit1,int searchId,int removeId,char* con
                     {
                         system("cls");
                        // goto_xy(10,5);
-                        printf("Record Exist");
+                        printf("\nRecord Exist");
                        // goto_xy(10,7);
-                        printf("Medicine Name : ");
+                        printf("\nMedicine Name : ");
                        // goto_xy(30,7);
                         printf("%s",a.medName);
                        // goto_xy(10,8);
-                        printf("Customer Name : ");
+                        printf("\nCustomer Name : ");
                        // goto_xy(30,8);
                         printf("%s",a.customerName);
                        // goto_xy(10,9);
-                        printf("Contact : ");
+                        printf("\nContact : ");
                         //goto_xy(30,9);
                         printf("%s",a.contactNo);
                         findMedicine='t';
                        // goto_xy(10,11);
-                        printf("press any key to view the next result ");
+                       // printf("press any key to view the next result ");
                        // getch();
 
                     }
@@ -881,7 +881,7 @@ int sell_medicine(int id1,char cho,int unit1,int searchId,int removeId,char* con
                             remove("sell.dat");
                             rename("record.dat","sell.dat");
                            // goto_xy(10,15);
-                            printf("The Medicine Record is removed from list");
+                            printf("\nThe Medicine Record is removed from list");
                             return_flag=1;
 
                         //}
@@ -890,12 +890,12 @@ int sell_medicine(int id1,char cho,int unit1,int searchId,int removeId,char* con
                     if(findMedicine!='t')
                     {
                         //goto_xy(10,15);
-                        printf("No Record Found");
+                        printf("\nNo Record Found");
                         return_flag=0;
                     }
 
                // goto_xy(10,17);
-                printf("Delete any more?(Y/N)");
+               // printf("Delete any more?(Y/N)");
                 //another=getch();
                 return(return_flag);
             }
@@ -911,14 +911,14 @@ int sell_medicine(int id1,char cho,int unit1,int searchId,int removeId,char* con
 
         default :
         {
-            printf("invalid entry !! Try again ");
+            printf("\ninvalid entry !! Try again ");
             return(1);
             //getch();
             //sell_medicine();
         }
     }
     //goto_xy(10,30);
-    printf("Press ENTER to go Back : ");
+   // printf("Press ENTER to go Back : ");
     //while(getch()!=13);
    // sell_medicine();
 }
@@ -927,9 +927,9 @@ int list_medicine(void)
 {
     system("cls");
     //goto_xy(1,1);
-    printf("***************************************** MEDICINE LIST *****************************************");
+    printf("\n\t***************************************** MEDICINE LIST *****************************************");
    // goto_xy(2,3);
-    printf("CATEGORY     ID    MED NAME             SUPPLIER ID         QTY       PRICE        RACK    CABIN");
+    printf("\nCATEGORY     ID    MED NAME             SUPPLIER ID         QTY       PRICE        RACK    CABIN");
 
     int i=5;
     fp=fopen("medicine1.dat","rb+");
@@ -970,9 +970,9 @@ int edit_medicine(int id1,char* medName,char* supplierName,int supplierId,char* 
     system("cls");
     int id;
    // goto_xy(20,4);
-    printf("****************Edit Medicine Details****************");
+    printf("\n\t****************Edit Medicine Details****************");
    // goto_xy(20,6);
-    printf("Enter the medicine ID : ");
+    printf("\nEnter the medicine ID : ");
     //scanf("%d",&id);
     id=id1;
     fp=fopen("medicine1.dat","rb+");
@@ -982,60 +982,60 @@ int edit_medicine(int id1,char* medName,char* supplierName,int supplierId,char* 
         if(check_id(id)==0)
         {
            // goto_xy(20,8);
-            printf("Medicine Record is available");
+            printf("\nMedicine Record is available");
            // goto_xy(32,9);
-            printf("Enter New Details");
+            printf("\nEnter New Details");
           //  goto_xy(30,10);
             printf("***********************");
           //  goto_xy(30,12);
-            printf("Medicine ID : ");
+            printf("\nMedicine ID : %d",id);
            // goto_xy(50,12);
             printf("%d",a.id);
            // goto_xy(30,13);
-            printf("Medicine Name : ");
+            printf("\nMedicine Name : %s",medName);
            // goto_xy(50,13);
             fflush(stdin);
             //scanf("%[^\n]%*c", a.medName);
             strcpy(a.medName,medName);
            // goto_xy(30,14);
-            printf("Supplier Name : ");
+            printf("\nSupplier Name : %s",supplierName);
            // goto_xy(50,14);
             fflush(stdin);
             //scanf("%[^\n]%*c", a.supplierName);
             strcpy(a.supplierName,supplierName);
            // goto_xy(30,15);
-            printf("Supplier ID : ");
+            printf("\nSupplier ID : %d",supplierId);
             //goto_xy(50,15);
             //scanf("%d",&a.supplierId);
             a.supplierId=supplierId;
           //  goto_xy(30,16);
-            printf("Supplier Ph: ");
+            printf("\nSupplier Ph: %s",supplierContact);
            // goto_xy(50,16);
             //scanf("%s",a.supplierContact);
             strcpy(a.supplierContact,supplierContact);
           //  goto_xy(30,17);
             fflush(stdin);
-            printf("Company Name : ");
+            printf("\nCompany Name : %s",companyName);
            // goto_xy(50,17);
             //scanf("%[^\n]%*c", a.companyName);
             strcpy(a.companyName,companyName);
            // goto_xy(30,18);
-            printf("Mail ID : ");
+            printf("\nMail ID : %s",mail);
            // goto_xy(50,18);
             //scanf("%s",a.mail);
             strcpy(a.mail,mail);
            // goto_xy(30,19);
-            printf("Quantity : ");
+            printf("\nQuantity : %d",qty);
            // goto_xy(50,19);
             //scanf("%d",&a.qty);
             a.qty=qty;
            // goto_xy(30,20);
-            printf("Rack : ");
+            printf("\nRack : %d",rackNo);
            // goto_xy(50,20);
             //scanf("%d",&a.rackNo);
             a.rackNo=rackNo;
            // goto_xy(30,21);
-            printf("Cabin : ");
+            printf("\nCabin : %d",cabinNo);
            // goto_xy(50,21);
             //scanf("%d",&a.cabinNo);
             a.cabinNo=cabinNo;
@@ -1044,19 +1044,19 @@ int edit_medicine(int id1,char* medName,char* supplierName,int supplierId,char* 
             fwrite(&a,sizeof(a),1,fp);
             fclose(fp);
             //goto_xy(30,23);
-            printf("Record Edited Successfully");
+            printf("\nRecord Edited Successfully");
             return(1);
         }
         else
         {
            // goto_xy(20,8);
-            printf("Medicine Record Not Available !");
+            printf("\nMedicine Record Not Available !");
             return(0);
            // getch();
         }
     }
    // goto_xy(30,25);
-    printf("Do you want to edit another record Y/N : ");
+    //printf("Do you want to edit another record Y/N : ");
     /*
     if(getch()=='y')
         edit_medicine();
@@ -1094,11 +1094,11 @@ int supplier_info(char cho,int id1)
             system("cls");
             int j=7;
           //  goto_xy(38,2);
-            printf("Supplier List");
+            printf("\n\t\t\tSupplier List");
            // goto_xy(2,3);
             printf("*****************************************************************************************************************");
           //  goto_xy(2,5);
-            printf("Supplier ID     Supplier Name            Contact No          Company Name              Email");
+            printf("\nSupplier ID     Supplier Name            Contact No          Company Name              Email");
             fp=fopen("medicine1.dat","rb");
             while(fread(&a,sizeof(a),1,fp)==1)
             {
@@ -1121,7 +1121,7 @@ int supplier_info(char cho,int id1)
                 return(0);
             fclose(fp);
             //goto_xy(2,j+5);
-            printf("Press any key to Go Back : ");
+            //printf("Press any key to Go Back : ");
             //getch();
             //supplier_info();
         }
@@ -1139,15 +1139,15 @@ int supplier_info(char cho,int id1)
                 int id_flag=0;
                 system("cls");
                // goto_xy(25,4);
-                printf("******************** Search Supplier ******************");
+                printf("\n\t******************** Search Supplier ******************");
               //  goto_xy(25,6);
-                printf("Supplier ID to search : ");
+                printf("\nSupplier ID to search : ");
                // goto_xy(39,6);
                 //scanf("%d",&id);
                 id=id1;
                 printf("%d",id);
                // goto_xy(25,8);
-                printf("searching");
+                printf("\nsearching");
                // goto_xy(35,8);
                 for(int i=0;i<6;i++)
                 {
@@ -1201,12 +1201,12 @@ int supplier_info(char cho,int id1)
                 }
 
                // goto_xy(30,22);
-                printf("Do you want to search another record Y/N");
+                //printf("Do you want to search another record Y/N");
                // another = getch();
             }
 
            // goto_xy(30,24);
-            printf("Press ENTER to go Back");
+            //printf("Press ENTER to go Back");
             //while(getch()!=13);
             //supplier_info();
 
