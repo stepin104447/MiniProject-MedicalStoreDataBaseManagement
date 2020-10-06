@@ -1,2 +1,2 @@
-@mainpage Calculator Application by Bharath G
-@subpage calculator_operations.h
+@mainpage MedcialStore Application by Amaljith S
+@subpage medical_store.h
