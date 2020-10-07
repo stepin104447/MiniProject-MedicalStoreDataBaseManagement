@@ -33,19 +33,19 @@ char categories[][15]={"Tablets","Capsules","Drops","Inhalers","Syrup","Other"};
 struct medicine
 {
     int id;
-    char medName[20];
-    char supplierName[20];
-    char customerName[20];
-    char companyName[20];
+    char medName[30];
+    char supplierName[30];
+    char customerName[30];
+    char companyName[30];
     char mail[50];
     int supplierId;
-    char supplierContact[20];
+    char supplierContact[30];
     float price;
     int qty;
     int unitSold;
     int rackNo;
     int cabinNo;
-    char contactNo[20];
+    char contactNo[30];
     char *cat; // medicine categories
     struct date soldDate;
 };
