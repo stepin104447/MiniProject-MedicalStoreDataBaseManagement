@@ -59,7 +59,7 @@ void test_add_medicine(void) {
 }
 
 void test_dispose_medicine(void) {
- // CU_ASSERT(1 == dispose_medicine(101));
+  CU_ASSERT(1 == dispose_medicine(101));
   
   /* Dummy fail*/
   
