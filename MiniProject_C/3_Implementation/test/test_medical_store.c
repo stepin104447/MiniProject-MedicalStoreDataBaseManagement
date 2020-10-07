@@ -77,7 +77,7 @@ void test_sell_medicine(void) {
   CU_ASSERT(1 == sell_medicine(102,'1',5,102,102,"12341021","customer 1021")); //sell medicine
   CU_ASSERT(1 == sell_medicine(102,'3',5,102,102,"12341021","customer 1021"));  // list sold medicine
   CU_ASSERT(1 == sell_medicine(102,'2',5,102,102,"12341021","customer 1021")); // search sold medicine
-  //CU_ASSERT(1 == sell_medicine(102,'4',5,102,102,"12341021","customer 1021")); // remove sold medicine
+  CU_ASSERT(1 == sell_medicine(102,'4',5,102,102,"12341021","customer 1021")); // remove sold medicine
   
   /* Dummy fail*/
  
