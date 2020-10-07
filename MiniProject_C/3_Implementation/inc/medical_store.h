@@ -113,12 +113,11 @@ int supplier_info(char cho,int id1);
 int get_data(int id,int s,char* medName,char* supplierName,int supplierId,char* supplierContact,char* mail,char* companyName,float price,int qty,int rackNo,int cabinNo);
 
 /**
-* checks if medicine with ID id already exist
-* @param[in] operand1 
-* @param[in] operand2 
-* @return Result of operand1 - operand2
+* checks if medicine with ID t already exist
+* @param[in] t 
+* @return status of function 1 - id doesnt exist, 0 - id exist
 */
-int check_id(int);
+int check_id(int t);
 //void returnfunc(void);
 
 //void goto_xy(int x,int y);
