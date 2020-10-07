@@ -1,5 +1,6 @@
 #include "medical_store.h"
 #include<stdio.h>
+#include<string.h>
 //#include<conio.h>
 
 //COORD coord = {0,0};
@@ -265,8 +266,10 @@ void main_menu(void)
             {
                 int ret;
                 char cho;
-                char name[25]={" "};
+                char name[25];
                 int id1=0;
+              
+                strcpy(name," ");
 
                 system("cls");
 
@@ -315,7 +318,8 @@ void main_menu(void)
             case 4:
             {
                 int id1=0,unit1=0,searchId=0,removeId=0,ret;
-                char customerName[30]={" "},contactNo[30]={" "};
+                char customerName[30],contactNo[30];
+              
                 char cho;
                 system("cls");
                 //goto_xy(2,2);
