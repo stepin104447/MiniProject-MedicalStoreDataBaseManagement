@@ -1,3 +1,9 @@
+/** 
+* @file medical_store.h
+* MedicalStore management application with seven major functions
+*
+*/
+
 #ifndef MEDICAL_STORE_H_INCLUDED
 #define MEDICAL_STORE_H_INCLUDED
 
@@ -10,7 +16,8 @@
 //#include<dos.h>
 #include<time.h>
 //#include<inttypes.h>
-
+=======
+#include<inttypes.h>
 
 /**
 *  adds the medicine details id,choice,medName,supplierName,supplierId,supplierContact,mail,companyName,price,qty,rackNo,cabinNo and returns the status
