@@ -86,13 +86,10 @@ int get_data(int id,int s,char* medName,char* supplierName,int supplierId,char* 
       //  goto_xy(25,11);
         printf("\nmedicine ID already exist!!.");
         //getch();
-        //add_medicine(id,s,medName,supplierName,supplierId,supplierContact,mail,companyName,price,qty,rackNo,cabinNo);
-
         return 0;
     }
 
-    a.id = t;
-    //goto_xy(20,9);
+    a.id = t; //goto_xy(20,9);
     printf("\nMedicine Name : ");
    // goto_xy(40,9);
     printf("%s",medName);
@@ -103,60 +100,51 @@ int get_data(int id,int s,char* medName,char* supplierName,int supplierId,char* 
     printf("\nsupplier name : ");
     //goto_xy(40,10);
     printf("%s",supplierName);
-    //scanf("%[^\n]%*c", a.supplierName);
     strcpy(a.supplierName,supplierName);
     fflush(stdin);
    // goto_xy(20,11);
     printf("supplier ID : ");
    // goto_xy(40,11);
     printf("%d",supplierId);
-    //scanf("%d",&a.supplierId);
     a.supplierId=supplierId;
     fflush(stdin);
    // goto_xy(20,12);
     printf("\nsupplier contact : ");
    // goto_xy(40,12);
     printf("%s",supplierContact);
-    //scanf("%s",a.supplierContact);
     strcpy(a.supplierContact,supplierContact);
     fflush(stdin);
     //goto_xy(20,13);
     printf("\nSupplier Email : ");
    // goto_xy(40,13);
     printf("%s",mail);
-    //scanf("%[^\n]%*c",a.mail);
     strcpy(a.mail,mail);
     fflush(stdin);
    // goto_xy(20,14);
     printf("\nCompany Name : ");
    // goto_xy(40,14);
     printf("%s",companyName);
-    //scanf("%[^\n]%*c", a.companyName);
     strcpy(a.companyName,companyName);
     fflush(stdin);
    // goto_xy(20,15);
     printf("\nprice : ");
    // goto_xy(40,15);
     printf("%0.2f",price);
-    //scanf("%f",&a.price);
     a.price=price;
    // goto_xy(20,16);
     printf("\nquantity : ");
    // goto_xy(40,16);
     printf("%d",qty);
-    //scanf("%d",&a.qty);
     a.qty=qty;
    // goto_xy(20,17);
     printf("\nrack no : ");
   //  goto_xy(40,17);
     printf("%d",rackNo);
-    //scanf("%d",&a.rackNo);
     a.rackNo=rackNo;
    // goto_xy(20,18);
     printf("\ncabin no : ");
    // goto_xy(40,18);
     printf("%d",cabinNo);
-    //scanf("%d",&a.cabinNo);
     a.cabinNo=cabinNo;
     return 1;
 
@@ -218,14 +206,10 @@ int add_medicine(int id,int choice,char* medName,char* supplierName,int supplier
             printf("\n");
             return(1);
            // getch();
-            //add_medicine(id,choice,medName,supplierName,supplierId,supplierContact,mail,companyName,price,qty,rackNo,cabinNo);
         }
 
     }
 }
-
-
-
 
 int dispose_medicine(int id1)
 {
@@ -241,7 +225,6 @@ int dispose_medicine(int id1)
         printf("\n\t******************");
        // goto_xy(10,5);
         printf("\nMedicine ID to  delete: ");
-        //scanf("%d",&d);
         d=id1;
         printf("%d",d);
         fp=fopen("medicine1.dat","rb+");
@@ -269,8 +252,6 @@ int dispose_medicine(int id1)
       fclose(fp);
       printf("\n");
         return(0);
-        //if(getch())
-        //main_menu();
     }
     if(findMedicine=='t' )
     {
@@ -323,14 +304,6 @@ int search_medicine(char cho,int id1,char *name)
     int id;
     printf("\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9 SEARCH MEDICINE \
 \xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9");
-
-    //goto_xy(20,10);
-   // printf("\xDB\xDB\xDB\xDB\xDB 1. Search by ID ");
-    //goto_xy(20,12);
-    //printf("\xDB\xDB\xDB\xDB\xDB 2. Search by Name ");
-    //goto_xy(20,15);
-    //printf("Enter your choice");
-    //choice=getch();
     choice=cho;
 
     fp=fopen("medicine1.dat","rb+");
@@ -347,7 +320,6 @@ int search_medicine(char cho,int id1,char *name)
           //  goto_xy(25,6);
             printf("\nEntered ID : ");
           //  goto_xy(39,6);
-            //scanf("%d",&id);
             id=id1;
             printf("%d",id);
            // goto_xy(25,8);
@@ -553,22 +525,6 @@ int sell_medicine(int id1,char cho,int unit1,int searchId,int removeId,char* con
     int return_flag;
     char ch;
     system("cls");
-    /*
-    goto_xy(2,2);
-    printf("************************* SELL MEDICINE ************************");
-    goto_xy(10,5);
-    printf("\xDB\xDB\xDB\xDB\xDB 1. Sell Medicine");
-    goto_xy(10,7);
-    printf("\xDB\xDB\xDB\xDB\xDB 2. List Sold Medicines");
-    goto_xy(10,9);
-    printf("\xDB\xDB\xDB\xDB\xDB 3. Search Sold Medicine");
-    goto_xy(10,11);
-    printf("\xDB\xDB\xDB\xDB\xDB 4. Remove Sold Medicine");
-    goto_xy(10,13);
-    printf("\xDB\xDB\xDB\xDB\xDB 5. Main Menu");
-    goto_xy(10,15);
-    printf("Enter your choice : ");
-    */
     ch =cho;
 
     switch(ch)
@@ -591,7 +547,6 @@ int sell_medicine(int id1,char cho,int unit1,int searchId,int removeId,char* con
                 printf("******************");
               //  goto_xy(21,7);
                 printf("\nMedicine ID to sell : ");
-                //scanf("%d",&id);
                 id=id1;
                 printf("%d",id);
 
@@ -766,7 +721,6 @@ int sell_medicine(int id1,char cho,int unit1,int searchId,int removeId,char* con
                 printf("\n\t***********************");
                // goto_xy(10,6);
                 printf("\nMedicine Id to search : ");
-                //scanf("%d",&id);
                 id=searchId;
                 printf("%d",id);
                 fs=fopen("sell.dat","rb");
@@ -986,7 +940,6 @@ int list_medicine(void)
     else
         return 0;
 
-    //returnfunc();
 }
 
 int edit_medicine(int id1,char* medName,char* supplierName,int supplierId,char* supplierContact,char* companyName,char* mail,int qty,int rackNo,int cabinNo)
@@ -1019,49 +972,40 @@ int edit_medicine(int id1,char* medName,char* supplierName,int supplierId,char* 
             printf("\nMedicine Name : %s",medName);
            // goto_xy(50,13);
             fflush(stdin);
-            //scanf("%[^\n]%*c", a.medName);
             strcpy(a.medName,medName);
            // goto_xy(30,14);
             printf("\nSupplier Name : %s",supplierName);
            // goto_xy(50,14);
             fflush(stdin);
-            //scanf("%[^\n]%*c", a.supplierName);
             strcpy(a.supplierName,supplierName);
            // goto_xy(30,15);
             printf("\nSupplier ID : %d",supplierId);
             //goto_xy(50,15);
-            //scanf("%d",&a.supplierId);
             a.supplierId=supplierId;
           //  goto_xy(30,16);
             printf("\nSupplier Ph: %s",supplierContact);
            // goto_xy(50,16);
-            //scanf("%s",a.supplierContact);
             strcpy(a.supplierContact,supplierContact);
           //  goto_xy(30,17);
             fflush(stdin);
             printf("\nCompany Name : %s",companyName);
            // goto_xy(50,17);
-            //scanf("%[^\n]%*c", a.companyName);
             strcpy(a.companyName,companyName);
            // goto_xy(30,18);
             printf("\nMail ID : %s",mail);
            // goto_xy(50,18);
-            //scanf("%s",a.mail);
             strcpy(a.mail,mail);
            // goto_xy(30,19);
             printf("\nQuantity : %d",qty);
            // goto_xy(50,19);
-            //scanf("%d",&a.qty);
             a.qty=qty;
            // goto_xy(30,20);
             printf("\nRack : %d",rackNo);
            // goto_xy(50,20);
-            //scanf("%d",&a.rackNo);
             a.rackNo=rackNo;
            // goto_xy(30,21);
             printf("\nCabin : %d",cabinNo);
            // goto_xy(50,21);
-            //scanf("%d",&a.cabinNo);
             a.cabinNo=cabinNo;
 
             fseek(fp,ftell(fp)-sizeof(a),0);
@@ -1097,20 +1041,6 @@ int supplier_info(char cho,int id1)
 {
      system("cls");
      char ch;
-    /*
-    goto_xy(10,2);
-    printf("Supplier Details");
-    goto_xy(9,3);
-    printf("*******************");
-    goto_xy(10,5);
-    printf("\xDB\xDB\xDB\xDB 1. Supplier List");
-    goto_xy(10,7);
-    printf("\xDB\xDB\xDB\xDB 2. Search Supplier");
-    goto_xy(10,9);
-    printf("\xDB\xDB\xDB\xDB 3. Main Menu");
-    goto_xy(10,11);
-    printf("Enter Your Choice ");
-    */
     ch=cho;
 
     switch(ch)
@@ -1122,7 +1052,7 @@ int supplier_info(char cho,int id1)
           //  goto_xy(38,2);
             printf("\n\t\t\tSupplier List");
            // goto_xy(2,3);
-            printf("*****************************************************************************************************************");
+            printf("\n*****************************************************************************************************************");
           //  goto_xy(2,5);
             printf("\nSupplier ID     Supplier Name            Contact No          Company Name              Email");
             fp=fopen("medicine1.dat","rb");
