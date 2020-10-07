@@ -201,19 +201,21 @@ int add_medicine(int id,int choice,char* medName,char* supplierName,int supplier
                     add_medicine(id,choice,medName,supplierName,supplierId,supplierContact,mail,companyName,price,qty,rackNo,cabinNo);
                 }
                 */
-
+                printf("\n");
                 return(1);
             }
           fclose(fp);
+          printf("\n");
             return(0);
 
         }
         break;
-        case 7: return(1);
+        case 7: return(1);printf("\n");
         break;
         default:
         {
             printf("\n invalid entry. ");
+            printf("\n");
             return(1);
            // getch();
             //add_medicine(id,choice,medName,supplierName,supplierId,supplierContact,mail,companyName,price,qty,rackNo,cabinNo);
@@ -265,6 +267,7 @@ int dispose_medicine(int id1)
        // goto_xy(10,12);
         printf("\nNo record is found ... Press Any key");
       fclose(fp);
+      printf("\n");
         return(0);
         //if(getch())
         //main_menu();
@@ -294,6 +297,7 @@ int dispose_medicine(int id1)
         {
             //goto_xy(10,14);
             printf("The record is sucessfully deleted");
+             printf("\n");
             return(1);
             //goto_xy(10,16);
             //printf("Delete another record?(Y/N)");
@@ -406,6 +410,7 @@ int search_medicine(char cho,int id1,char *name)
 \xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2");
                     id_flag = 1;
                    fclose(fp);
+                  printf("\n");
                     return 1;
                 }
             }
@@ -415,6 +420,7 @@ int search_medicine(char cho,int id1,char *name)
                 //goto_xy(25,9);
                 printf("\nMedicine Record is not available");
                 fclose(fp);
+              printf("\n");
                 return 0;
             }
 
@@ -499,6 +505,7 @@ int search_medicine(char cho,int id1,char *name)
 \xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2");
                     name_flag=1;
                    fclose(fp);
+                    printf("\n");
                     return 1;
 
                 }
@@ -509,6 +516,7 @@ int search_medicine(char cho,int id1,char *name)
                // goto_xy(25,9);
                 printf("\nMedicine Record is not available");
                fclose(fp);
+                printf("\n");
                 return(0);
             }
 
@@ -529,6 +537,7 @@ int search_medicine(char cho,int id1,char *name)
         {
            // goto_xy(20,17);
             printf("\ninvalid Entry ");
+            printf("\n");
             return(1);
             //getch();
            // search_medicine();
@@ -631,6 +640,7 @@ int sell_medicine(int id1,char cho,int unit1,int searchId,int removeId,char* con
                         return_flag=0;
                         fclose(fp);
                         fclose(fs);
+                        printf("\n");
                         return(0);
                         //getch();
                         //sell_medicine();
@@ -686,6 +696,7 @@ int sell_medicine(int id1,char cho,int unit1,int searchId,int removeId,char* con
                     }
 
                 }
+                printf("\n");
                 return(return_flag);
             }
 
@@ -732,6 +743,7 @@ int sell_medicine(int id1,char cho,int unit1,int searchId,int removeId,char* con
                 return_flag= 0;
             //while(getch()!=13);
             //sell_medicine();
+              printf("\n");
             return(return_flag);
         }
         break;
@@ -816,6 +828,7 @@ int sell_medicine(int id1,char cho,int unit1,int searchId,int removeId,char* con
                // goto_xy(10,20);
                // printf("Try Another Search?(Y/N)");
                 //another=getch();
+                printf("\n");
                 return(return_flag);
             }
         }
@@ -905,6 +918,7 @@ int sell_medicine(int id1,char cho,int unit1,int searchId,int removeId,char* con
                // goto_xy(10,17);
                // printf("Delete any more?(Y/N)");
                 //another=getch();
+                printf("\n");
                 return(return_flag);
             }
 
@@ -920,6 +934,7 @@ int sell_medicine(int id1,char cho,int unit1,int searchId,int removeId,char* con
         default :
         {
             printf("\ninvalid entry !! Try again ");
+            printf("\n");
             return(1);
             //getch();
             //sell_medicine();
@@ -965,6 +980,7 @@ int list_medicine(void)
 
     //goto_xy(35,25);
     fclose(fp);
+    printf("\n");
     if(i>5)
         return 1;
     else
@@ -1053,12 +1069,14 @@ int edit_medicine(int id1,char* medName,char* supplierName,int supplierId,char* 
             fclose(fp);
             //goto_xy(30,23);
             printf("\nRecord Edited Successfully");
+            printf("\n");
             return(1);
         }
         else
         {
            // goto_xy(20,8);
             printf("\nMedicine Record Not Available !");
+            printf("\n");
             return(0);
            // getch();
         }
@@ -1123,6 +1141,7 @@ int supplier_info(char cho,int id1)
 
                 j++;
             }
+            printf("\n");
             if(j>7)
                 return(1);
             else
@@ -1207,8 +1226,10 @@ int supplier_info(char cho,int id1)
                 {
                    // goto_xy(25,9);
                     printf("Invalid Id");
+                    printf("\n");
                     return(0);
                 }
+               printf("\n");
                return(1);
 
                // goto_xy(30,22);
@@ -1226,6 +1247,7 @@ int supplier_info(char cho,int id1)
 
         case '3':
         {
+           printf("\n");
            return(1);
            // main_menu();
         }
@@ -1233,7 +1255,8 @@ int supplier_info(char cho,int id1)
 
         default:
          {
-           //  printf("Invalid Entry ! Try again ");
+           printf("Invalid Entry ! Try again ");
+           printf("\n");
              return(1);
             // getch();
              //supplier_info();
