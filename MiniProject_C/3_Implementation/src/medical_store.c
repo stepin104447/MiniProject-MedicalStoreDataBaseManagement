@@ -30,7 +30,7 @@ struct date
 
 char categories[][15]={"Tablets","Capsules","Drops","Inhalers","Syrup","Other"};
 
-struct medicine
+struct medicine 
 {
     int id;
     char medName[30];
@@ -283,6 +283,7 @@ int dispose_medicine(int id1)
             //goto_xy(10,16);
             //printf("Delete another record?(Y/N)");
             //another=getch();
+          another='n';
         }
     //}
     //else
@@ -872,6 +873,7 @@ int sell_medicine(int id1,char cho,int unit1,int searchId,int removeId,char* con
                // goto_xy(10,17);
                // printf("Delete any more?(Y/N)");
                 //another=getch();
+               another='n';
                 printf("\n");
                 return(return_flag);
             }
