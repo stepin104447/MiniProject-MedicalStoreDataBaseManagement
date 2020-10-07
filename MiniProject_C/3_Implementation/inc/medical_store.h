@@ -20,7 +20,7 @@ int edit_medicine(int id1,char* medName,char* supplierName,int supplierId,char* 
 int supplier_info(char cho,int id1);
 
 int get_data(int id,int s,char* medName,char* supplierName,int supplierId,char* supplierContact,char* mail,char* companyName,float price,int qty,int rackNo,int cabinNo);
-int check_id(int);
+int check_id(int t);
 void returnfunc(void);
 
 //void goto_xy(int x,int y);
