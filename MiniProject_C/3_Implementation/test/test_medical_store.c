@@ -99,8 +99,8 @@ void test_edit_medicine(void) {
 }
                                
 void test_supplier_info(void) {
-  CU_ASSERT(1 == supplier_info('1',1001)); //list of suppliers
-// CU_ASSERT(1 == supplier_info('2',1001));  // search supplier
+  CU_ASSERT(1 == supplier_info('1',1002)); //list of suppliers
+ CU_ASSERT(1 == supplier_info('2',1002));  // search supplier
   
   /* Dummy fail*/
  
