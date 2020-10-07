@@ -1,4 +1,5 @@
 # Behavior Diagrams
 
-## Add all the Behavior diagrams implememted
+## 1. Use Case Diagram
+## 2. Activity Diagram
 
