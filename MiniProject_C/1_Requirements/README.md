@@ -1,6 +1,6 @@
 # Software Requirements
 * IDE : Code::Blocks version 20.03
-* Compiler : MinGW compiler
+* Compiler : GNU GCC compiler
 * Tools : Ms Word, drawio.io
 
 # Header Files Used
