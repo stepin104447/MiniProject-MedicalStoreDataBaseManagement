@@ -1,7 +1,13 @@
-# Requirements
+# Software Requirements
+* IDE : Code::Blocks version 20.03
+* Compiler : MinGW compiler
+* Tools : Ms Word, drawio.io
 
-* Capture all the requirements wrt system, module, interface, integration, testing, Functional and Non-functional
-* Captures Basic Planning of the project through - Sample Gantt Chart attached
+# Header Files Used
+* <stdio.h> (Standard input-output header)
+* <conio.h> (Console input-output header) 
+* <stdlib.h> (Standard library header)
+* <time.h> (Time header) 
+* <string.h> (String header)
 
-* Tools: MS Excel, MS word or Similar
 
