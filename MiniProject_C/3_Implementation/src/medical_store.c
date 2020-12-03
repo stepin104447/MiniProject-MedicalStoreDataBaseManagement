@@ -82,7 +82,7 @@ int get_data(int id,int s,char* medName,char* supplierName,int supplierId,char* 
 
     if(check_id(t)==0)
     {
-       system("cls");
+       //system("cls");
       //  goto_xy(25,11);
         printf("\nmedicine ID already exist!!.");
         //getch();
@@ -167,7 +167,7 @@ int add_medicine(int id,int choice,char* medName,char* supplierName,int supplier
         case 5:
         case 6:
         {
-            system("cls");
+            //system("cls");
             fp=fopen("medicine1.dat","ab+");
             if(get_data(id,s,medName,supplierName,supplierId,supplierContact,mail,companyName,price,qty,rackNo,cabinNo)==1)
             {
@@ -213,7 +213,7 @@ int add_medicine(int id,int choice,char* medName,char* supplierName,int supplier
 
 int dispose_medicine(int id1)
 {
-    system("cls");
+    //system("cls");
     int d;
     char another='y';
     while(another=='y')
@@ -301,7 +301,7 @@ int dispose_medicine(int id1)
 int search_medicine(char cho,int id1,char *name)
 {
     char choice;
-    system("cls");
+    //system("cls");
     int id;
     printf("\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9 SEARCH MEDICINE \
 \xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9");
@@ -315,7 +315,7 @@ int search_medicine(char cho,int id1,char *name)
         case '1':
         {
             int id_flag=0;
-            system("cls");
+           // system("cls");
            // goto_xy(25,4);
             printf("\n\t******************** Search By ID ******************");
           //  goto_xy(25,6);
@@ -414,7 +414,7 @@ int search_medicine(char cho,int id1,char *name)
 
         case '2':
         {
-            system("cls");
+            //system("cls");
             char s[15];
            // goto_xy(25,4);
             printf("\n\t************** Search By Name **************");
@@ -532,7 +532,7 @@ int sell_medicine(int id1,char cho,int unit1,int searchId,int removeId,char* con
     {
         case '1' :
         {
-            system("cls");
+            //system("cls");
             int c = 0;
             int unit;
             float total;
@@ -541,7 +541,7 @@ int sell_medicine(int id1,char cho,int unit1,int searchId,int removeId,char* con
             while(another=='y')
             {
 
-                system("cls");
+                //system("cls");
                // goto_xy(22,4);
                 printf("\n\tSELL MEDICINE");
               //  goto_xy(20,5);
@@ -661,7 +661,7 @@ int sell_medicine(int id1,char cho,int unit1,int searchId,int removeId,char* con
 
         case '2' :
         {
-            system("cls");
+           // system("cls");
             int j=6;
             //goto_xy(47,1);
             printf("\n\t\t\tSOLD MEDICINE");
@@ -706,7 +706,7 @@ int sell_medicine(int id1,char cho,int unit1,int searchId,int removeId,char* con
 
         case '3' :
         {
-            system("cls");
+            //system("cls");
 
             int id,c=0;
 
@@ -792,7 +792,7 @@ int sell_medicine(int id1,char cho,int unit1,int searchId,int removeId,char* con
 
         case '4':
         {
-            system("cls");
+            //system("cls");
             int id;
             FILE *fg;  //declaration of temporary file for delete
             char another='y';
@@ -904,7 +904,7 @@ int sell_medicine(int id1,char cho,int unit1,int searchId,int removeId,char* con
 
 int list_medicine(void)
 {
-    system("cls");
+    //system("cls");
     //goto_xy(1,1);
     printf("\n\t***************************************** MEDICINE LIST *****************************************");
    // goto_xy(2,3);
@@ -946,7 +946,7 @@ int list_medicine(void)
 
 int edit_medicine(int id1,char* medName,char* supplierName,int supplierId,char* supplierContact,char* companyName,char* mail,int qty,int rackNo,int cabinNo)
 {
-    system("cls");
+   // system("cls");
     int id;
    // goto_xy(20,4);
     printf("\n\t****************Edit Medicine Details****************");
@@ -1041,7 +1041,7 @@ int edit_medicine(int id1,char* medName,char* supplierName,int supplierId,char* 
 }
 int supplier_info(char cho,int id1)
 {
-     system("cls");
+     //system("cls");
      char ch;
     ch=cho;
 
@@ -1049,7 +1049,7 @@ int supplier_info(char cho,int id1)
     {
         case '1':
         {
-            system("cls");
+           // system("cls");
             int j=7;
           //  goto_xy(38,2);
             printf("\n\t\t\tSupplier List");
