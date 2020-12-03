@@ -218,7 +218,7 @@ int dispose_medicine(int id1)
     char another='y';
     while(another=='y')
     {
-        system("cls");
+        //system("cls");
         //goto_xy(10,2);
         printf("\n\tDelete Medicine");
        // goto_xy(10,3);
