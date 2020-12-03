@@ -1,6 +1,5 @@
 #include "medical_store.h"
 #include<stdio.h>
-#include<string.h>
 //#include<conio.h>
 
 //COORD coord = {0,0};
@@ -28,7 +27,7 @@ int main()
 }
 void close_application()
 {
-    //system("cls");
+    system("cls");
    // goto_xy(16,3);
     printf("\tMEDICAL STORE MANAGEMENT SYSTEM");
    // goto_xy(16,6);
@@ -50,7 +49,7 @@ void close_application()
 
 void Password(void)
 {
-    //system("cls");
+    system("cls");
     char ch,pass[10];
     char d[]=" Password Protected";
     int i=0;
@@ -79,7 +78,6 @@ void Password(void)
   while(ch!=13)
     {
         ch=getch();
-
         if(ch!=13 && ch!=8)
         {
             putch('*');
@@ -114,7 +112,7 @@ void Password(void)
 void main_menu(void)
 {
 
-    //system("cls");
+    system("cls");
     //int i;
    // goto_xy(20,3);
     printf("\n\t\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE  MAIN MENU \xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE\xCE");
@@ -153,7 +151,7 @@ void main_menu(void)
                 char medName[20],supplierName[20],supplierContact[20],mail[30],companyName[20];
 
 
-                //system("cls");
+                system("cls");
                // goto_xy(20,5);
                 printf("\n\t\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2 SELECT MEDICINE CATEGORY \
 \xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2");
@@ -178,7 +176,7 @@ void main_menu(void)
                 scanf("%d",&choice);
                 if(choice==7)
                     main_menu();
-                //system("cls");
+                system("cls");
                 int t;
                // goto_xy(20,3);
                 printf("\nEnter information");
@@ -236,7 +234,7 @@ void main_menu(void)
                 printf("\ncabin no : ");
                // goto_xy(40,18);
                 scanf("%d",&cabinNo);
-                //system("cls");
+                system("cls");
 
 
                 ret=add_medicine(id,choice,medName,supplierName,supplierId,supplierContact,mail,companyName,price,qty,rackNo,cabinNo);
@@ -248,7 +246,7 @@ void main_menu(void)
             case 2:
             {
                 int id1,ret;
-                //system("cls");
+                system("cls");
                // goto_xy(10,2);
                 printf("\n\tDelete Medicine");
                // goto_xy(10,3);
@@ -266,12 +264,10 @@ void main_menu(void)
             {
                 int ret;
                 char cho;
-                char name[25];
+                char name[25]={" "};
                 int id1=0;
-              
-                strcpy(name," ");
 
-                //system("cls");
+                system("cls");
 
                 printf("\n\t\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9 SEARCH MEDICINE \
 \xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9\xF9");
@@ -286,7 +282,7 @@ void main_menu(void)
                // cho=getch();
                 if(cho=='1')
                 {
-                    //system("cls");
+                    system("cls");
                     //goto_xy(25,4);
                     printf("\n\t******************** Search By ID ******************");
                     //goto_xy(25,6);
@@ -298,7 +294,7 @@ void main_menu(void)
                 }
                 else
                 {
-                    //system("cls");
+                    system("cls");
                     char s[15];
                    // goto_xy(25,4);
                     printf("\n\t************** Search By Name **************");
@@ -318,10 +314,9 @@ void main_menu(void)
             case 4:
             {
                 int id1=0,unit1=0,searchId=0,removeId=0,ret;
-                char customerName[30],contactNo[30];
-              
+                char customerName[30]={" "},contactNo[30]={" "};
                 char cho;
-                //system("cls");
+                system("cls");
                 //goto_xy(2,2);
                 printf("\n\t************************* SELL MEDICINE ************************");
                // goto_xy(10,5);
@@ -340,7 +335,7 @@ void main_menu(void)
                 //cho =getch();
                 if(cho=='1')
                 {
-                    //system("cls");
+                    system("cls");
                    // goto_xy(22,4);
                     printf("\n\tSELL MEDICINE");
                    // goto_xy(20,5);
@@ -368,7 +363,7 @@ void main_menu(void)
                 }
                 if(cho=='3')
                 {
-                    //system("cls");
+                    system("cls");
                     //goto_xy(10,2);
                     printf("\nSearch Sold Medicines");
                    // goto_xy(10,3);
@@ -380,7 +375,7 @@ void main_menu(void)
                 }
                 if(cho=='4')
                 {
-                     //system("cls");
+                     system("cls");
                    // goto_xy(10,2);
                     printf("\nRemove Medicine From Sold List");
                    // goto_xy(10,3);
@@ -414,7 +409,7 @@ void main_menu(void)
             case 6:
             {
                  int ret;
-                 //system("cls");
+                 system("cls");
                  char medName[20],supplierName[20],supplierContact[20],mail[20],companyName[20];
                 int id1,rackNo,cabinNo,qty,supplierId;
                // goto_xy(20,4);
@@ -491,7 +486,7 @@ void main_menu(void)
             break;
             case 7:
             {
-                //system("cls");
+                system("cls");
                 char cho;
                 int id1=0;
                 int ret;
@@ -517,7 +512,7 @@ void main_menu(void)
                 }
                 if(cho=='2')
                 {
-                    //system("cls");
+                    system("cls");
                    // goto_xy(25,4);
                     printf("\n\t******************** Search Supplier ******************");
                    // goto_xy(25,6);
@@ -546,5 +541,3 @@ void main_menu(void)
             }
         }
 }
-
-
