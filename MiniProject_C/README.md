@@ -1,4 +1,5 @@
 # Project Information
 
-* Add a brief discription about the project
-* Add the information about extra folders or files added
+The details of the medicines that are present in the medical store can be managed in a well organized way with the help of this project. The project helps in collecting the details of the medicines stored in a medical store and accesses those details when required. The user can keep track of the details of the medicines bought and sold. The user can also search for the details of the customer and supplier by using an id or a name. The Medical Shop Management System helps to maintain and keep the medicines in the medical store in the proper place. When you need a particular medicine, you can get to know the exact location of that particular medicine that you are searching for.
+
+In this project file handling should be effectively used for almost all major functions. The whole project is based on file handling as all records are stored in a file. Data structure has also been used to store and organize records. The user can input many information like medicine Id, rack no., cabinet no., supplier’s name, unit cost etc while adding a medicine into the store which will be stored in files and can be accessed when required by the user. 
